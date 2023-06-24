@@ -1,6 +1,6 @@
 :root{
     --primary:#0e9ab3;
-    --primary-dark:##093f5b;
+    --primary-dark:#093f5b;
 }
 *{
     margin: 0;padding: 0;
@@ -319,4 +319,81 @@ header a{
   .navbar-mobile .dropdown>.dropdown-active {
     display: block;
   }
-  /* Heade section ended */
+  /* Header section ended */
+
+  /* Hero Section */
+  #hero{
+    min-height: 100vh;
+    background: url('./images/hero-bg.jpg') top center no-repeat;
+    background-size: cover;
+  }
+  @media (max-width: 628px) {
+    #hero {
+      background: url("./images/hero-bg1.png") top center no-repeat;
+      background-size: cover;
+    }
+  }
+  @media only screen and (max-width: 1050px) and (min-width: 629px) {
+      #hero {
+        background: url("./images/hero-bg2.png") top center no-repeat;
+        background-size: cover;
+      }
+  }
+  .hero-content{
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap:20px;
+  }
+  .hero-content .heading{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .hero-content .heading h2{
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 56px;
+    font-family: "open sans", sans-serif;
+    letter-spacing: 4px;
+    color:var(--primary-dark);
+  }
+  .hero-content .heading h4{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-left: 100px;
+    font-family: "open sans", sans-serif;
+    animation: type 4s steps(40) 1s infinite normal;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  @keyframes type {
+    0%{width: 0;}
+    100%{width: 300px;}
+  }
+  .hero-content .heading p{
+    color: black;
+    margin: 10px 0 0 0;
+    font-size: 24px;
+  }
+  .hero-content .img{
+    padding: 10px;
+    animation: moveupdown 2s ease 1s infinite alternate-reverse;
+  }
+  @keyframes moveupdown {
+    0%{transform: translateY(10px);}
+    100%{transform: translateY(-10px);}
+  }
+  @media(max-width:991px){
+    .hero-content{
+      grid-template-columns:1fr;
+      place-content: center;
+    }
+    .hero-content p{
+      text-align:center;
+    }
+    .hero-content .img{
+      max-height: 250px;
+    }
+  }
