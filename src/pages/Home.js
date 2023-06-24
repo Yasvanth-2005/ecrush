@@ -23,6 +23,11 @@ import c10 from "../images/Club Cards/technical club.webp";
 import c11 from "../images/Club Cards/promotion and marketing.webp";
 import c12 from "../images/Club Cards/infra.webp";
 
+import course1 from "../images/courses/Spoken english.webp";
+import course2 from "../images/courses/E grammar.webp";
+import course3 from "../images/courses/Airforce.webp";
+import nmrsir from "../images/courses/nmrsir.webp";
+
 const SectionTitle = (props) => {
   return (
     <div className="section-title">
@@ -66,6 +71,44 @@ const clubCardsInfo = [
     {id:11,img:c11,bgcolor:"white",title:"Promotion & Marketing",desc:"Best way to connect and reach you...",link:"/Promotion-and-Marketing"},
     {id:12,img:c12,bgcolor:"rgba(226, 190, 216, 0.48)",title:"Infra Team",desc:"We teach you real-time dedication...",link:"/Infra-Team"}
 ];
+
+const CourseCard = (props) => {
+  return (
+    <div className="col-12 col-lg-4 col-md-6">
+                <div class="course-card">
+                  <div className="course-img">
+                    <img src={props.img} className="img-fluid"/>
+                  </div>
+                  <div className="course-info">
+                     <div class="end-alignment">
+                       <div className="main-info">
+                          <p>No.of Videos : {props.vn}</p>
+                          <p>{props.price}</p>
+                       </div>
+                       <h3>{props.title}</h3>
+                       <p>{props.sub}</p>
+                     </div>
+                     <div className="course-author-maybe d-flex">
+                        <div className="author">
+                          <div className="author-img"><img src={props.aimg} alt="author-img" /></div>
+                          <span style={{marginLeft:"5px",fontWeight:700}}>{props.author}</span>
+                        </div>
+                        <div className="views">
+                          <span style={{marginRight:"5px"}}>{props.n1}</span>
+                          <span style={{marginLeft:"5px"}}>{props.n2}</span>
+                        </div>
+                     </div>
+                  </div>
+                </div>
+    </div>
+  )
+}
+
+const courseCardInfo = [
+  {id:1,img:course1,vn:55,price:"Free",title:"Spoken English Classes",sub:"This course provides you the content for learning English and you'll be taught how to apply it in your daily communication.",aimg:nmrsir,n1:19980,n2:776,author:"NMR.Polagni"},
+  {id:2,img:course2,vn:4,price:"Free",title:"English Grammar",sub:"Grammar is the basic structure of any language. This course introduces you the different aspects of grammar in English language.",aimg:nmrsir,n1:799,n2:251,author:"NMR.Polagni"},
+  {id:3,img:course3,vn:7,price:"Free",title:"Indian Air Force",sub:"This course helps many students and aspirants in learning English required for cracking IAF examination.",aimg:nmrsir,n1:57,n2:14,author:"NMR.Polagni"}
+]
 
 export default function Home() {
   return (
@@ -194,6 +237,16 @@ export default function Home() {
              {clubCardsInfo.map(card => <ClubCard key={card.id} img={card.img} title={card.title} desc={card.desc} link={card.link} bgcolor={card.bgcolor}/>)}
           </div>
         </div>
+      </section>
+
+      <section id="courses">
+      <SectionTitle title="courses" />
+         <div className="container">
+           <div className="row">
+              {courseCardInfo.map(card => <CourseCard key={card.id} img={card.img} title={card.title} vn={card.vn} price={card.price} n1={card.n1} n2={card.n2} sub={card.sub} aimg={card.aimg} author={card.author}/>)}
+           </div>
+           <h2 className="coursetext"><Link to="/courses">Explore more<span>&rarr;</span></Link></h2>
+         </div>
       </section>
     </>
   );

@@ -1,6 +1,7 @@
 :root {
   --primary: #0e9ab3;
   --primary-dark: #093f5b;
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;
@@ -18,14 +19,13 @@
   color: #0e9ab3;
   padding-bottom: 10px;
   width: fit-content;
-  margin:20px auto 40px auto;
+  margin:40px auto 40px auto;
   position: relative;
-  /* text-shadow:  0px 0px 30px var(--primary); */
 }
 .section-title h1:after{
   content:"";
   position: absolute;
-  bottom: -5px;
+  bottom: 0px;
   left:calc(50% - 25px);
   width: 50px;
   height: 3px;
@@ -523,3 +523,78 @@ header .navbar-mobile {
 .card-container .card button:hover{
   transform: translateY(-5px);
 }
+/* Clubs cards */
+/* Courses starts */
+#courses .row .col-12{
+  display: flex;
+  justify-content: center;
+}
+.course-card{
+  width: 330px;
+  height: 550px;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 3px solid #eef0ef;
+  box-shadow: 0 32px 54px 0 rgb(0 0 0 / 10%);
+  margin-bottom: 15px;
+}
+.row .course-card{
+  padding-right: 0;
+  padding-left: 0;
+}
+.course-card .course-info{
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.course-info .main-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 10px;
+}
+.course-info .main-info p:nth-child(2){
+    font-weight: 700;
+    font-size: 20px;
+    color: #013289;
+}
+.course-card .course-info h3{
+  margin-top: -10px;
+  color: #37423b;
+  transition: 0.3s;
+  font-size: 24px;
+}
+.course-card .course-info>div>p{
+  font-size: 16px;
+  text-indent: 50px;
+  margin-bottom: 60px;
+}
+.course-author-maybe .author .author-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.course-author-maybe{
+  justify-content: space-between;
+  align-items: center;
+}
+.course-author-maybe .author .author-img img{
+  width: 100%;height: 100%;
+}
+.course-author-maybe .author{
+  display: flex;
+  align-items: center;
+}
+.coursetext{
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.coursetext a{
+  text-decoration: none;
+}
+/* Course ends */
