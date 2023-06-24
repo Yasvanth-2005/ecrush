@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import 'bootstrap/dist/js/bootstrap';
 import logo from "../images/favicon.png";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
