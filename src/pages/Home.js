@@ -110,6 +110,34 @@ const courseCardInfo = [
   {id:3,img:course3,vn:7,price:"Free",title:"Indian Air Force",sub:"This course helps many students and aspirants in learning English required for cracking IAF examination.",aimg:nmrsir,n1:57,n2:14,author:"NMR.Polagni"}
 ]
 
+const Qlinks = (props) => {
+   return (
+    <div className="link-section container">
+                <h1 className="link-title">{props.title}</h1>
+                <div className="q-links">
+                  <button>
+                    <a href={props.l1}>{props.l1n}</a>
+                  </button>
+                  <button>
+                    <a href={props.l2}>{props.l2n}</a>
+                  </button>
+                  <button>
+                    <a href={props.l3}>{props.l3n}</a>
+                  </button>
+                  <button>
+                    <a href={props.l4}>{props.l4n}</a>
+                  </button>
+                </div>
+    </div>
+   )
+}
+
+const qLinkSection = [
+  {id:1,title:"RGUKT Websites",l1:"https://rguktn.ac.in/",l1n:"RGUKT Nuzvid",l2:"https://rguktrkv.ac.in/",l2n:"RGUKT RK Valley",l3:"https://rguktsklm.ac.in/",l3n:"RGUKT Sklm",l4:"https://rguktong.ac.in/",l4n:"RGUKT Ongole"},
+  {id:2,title:"Student Websites",l1:"https://intranet.rguktn.ac.in/",l1n:"Intranet",l2:"https://intranet.rguktn.ac.in/SMS/",l2n:"SMS",l3:"http://103.225.13.244/updates/login.php",l3n:"Seating Position",l4:"https://examcell.rguktn.ac.in/",l4n:"Examination Cell"},
+  {id:3,title:"Student Organisation Websites",l1:"https://www.instagram.com/sdcac_rguktn/",l1n:"SDCAC",l2:"https://www.instagram.com/studentmitra/",l2n:"Student Mitra",l3:"https://www.instagram.com/helpinghands_rguktn/",l3n:"Helping Hands",l4:"https://www.instagram.com/campus.chronicle/",l4n:"Campus Chronicle"}
+]
+
 export default function Home() {
   return (
     <>
@@ -247,6 +275,11 @@ export default function Home() {
            </div>
            <h2 className="coursetext"><Link to="/courses">Explore more<span>&rarr;</span></Link></h2>
          </div>
+      </section>
+
+      <section id="quick-links">
+          <SectionTitle title="Quick Links" />
+          {qLinkSection.map(link => <Qlinks key={link.id} title={link.title}  l1={link.l1} l1n={link.l1n} l2={link.l2} l2n={link.l2n} l3={link.l3} l3n={link.l3n} l4={link.l4} l4n={link.l4n}/>)}
       </section>
     </>
   );

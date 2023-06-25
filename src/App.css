@@ -8,28 +8,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background: #fafbfd;
+}
 .row > * {
   padding-right: 0;
   padding-left: 0;
 }
-.section-title h1{
+.section-title h1 {
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   color: #0e9ab3;
   padding-bottom: 10px;
   width: fit-content;
-  margin:40px auto 40px auto;
+  margin: 40px auto 40px auto;
   position: relative;
 }
-.section-title h1:after{
-  content:"";
+.section-title h1:after {
+  content: "";
   position: absolute;
   bottom: 0px;
-  left:calc(50% - 25px);
+  left: calc(50% - 25px);
   width: 50px;
   height: 3px;
-  background-color: var(--primary);  
+  background-color: var(--primary);
 }
 /* Header Start */
 
@@ -188,8 +191,6 @@ header a {
 
 .mobile-nav-toggle.bi-x {
   color: #093f5b;
- 
-  ;
 }
 
 @media (max-width: 991px) {
@@ -202,7 +203,7 @@ header a {
     text-align: center;
   }
   .get-started-btn {
-  margin-right: 10px;
+    margin-right: 10px;
   }
 
   #navElement {
@@ -212,8 +213,6 @@ header a {
     margin-left: 16px;
     font-size: 15px;
     text-align: center;
-
-
   }
 
   #navElement:hover {
@@ -222,23 +221,21 @@ header a {
   }
 
   .navbar li {
-    text-align:center;
+    text-align: center;
   }
   .navbar .dropdown ul li {
     max-width: 100px;
-  
   }
-  
+
   .navbar .dropdown ul a {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
     font-weight: 500;
   }
-  
 }
 
-@media(min-width:991px) {
+@media (min-width: 991px) {
   #navElement:after {
     content: "";
     position: absolute;
@@ -280,8 +277,7 @@ header .navbar-mobile {
   padding: 10px 0;
   border-radius: 6px;
   background: #f2f3f7;
-  box-shadow: 0.6em 0.6em 1.2em #d2dce9,
-    -0.5em -0.5em 1em #ffffff;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
   border-radius: 20px;
   /* background: #fff; */
   /* background: rgba(255, 255, 255, 0.15); */
@@ -299,7 +295,7 @@ header .navbar-mobile {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #0e9ab3;
 }
 
@@ -307,14 +303,13 @@ header .navbar-mobile {
   position: static;
   display: none;
   margin: 10px 20px;
-  color:black;
+  color: black;
   padding: 10px 0;
   z-index: 99;
   opacity: 1;
   visibility: visible;
   background: #f2f3f7;
-  box-shadow: 0.6em 0.6em 1.2em #d2dce9,
-    -0.5em -0.5em 1em #ffffff;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
   border-radius: 20px;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
@@ -333,10 +328,11 @@ header .navbar-mobile {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .dropdown ul li:hover > a {
   color: black;
 }
-.navbar a, .navbar a:focus {
+.navbar a,
+.navbar a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -348,7 +344,7 @@ header .navbar-mobile {
   transition: 0.3s;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 /* Header section ended */
@@ -441,53 +437,54 @@ header .navbar-mobile {
   }
 }
 /* About Section */
-.about-content h3{
+.about-content h3 {
   font-weight: 600;
   font-size: 18px;
 }
-.about-content>ul{
+.about-content > ul {
   list-style-type: none;
 }
-.about-content>ul li i{
+.about-content > ul li i {
   margin-right: 5px;
 }
 /* About Section ended */
 /* Card Section Begin */
-.card-container{
+.card-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.card-container .card{
+.card-container .card {
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding: 30px 20px;
   width: 300px;
   height: 320px;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-  cursor:pointer;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  cursor: pointer;
   margin-bottom: 40px;
 }
-.card-container .card:hover{
+.card-container .card:hover {
   transform: scale(1.05);
   transition: scale 0.8s ease-in-out;
 }
-.card-container .card .card-img{
+.card-container .card .card-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
 }
-.card-container .card .card-img img{
+.card-container .card .card-img img {
   width: 100%;
   height: 100%;
 }
-.card-container .card .card-info{
-  text-align:center;
+.card-container .card .card-info {
+  text-align: center;
 }
-.card-container .card .clubname{
+.card-container .card .clubname {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -497,39 +494,39 @@ header .navbar-mobile {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.card-container .card p{
-  font-size:12px;
+.card-container .card p {
+  font-size: 12px;
   padding: 0px 30px;
 }
-.card-container .card a{
+.card-container .card a {
   text-decoration: none;
 }
-.card-container .card button{
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    text-align: center;
-    color: #FFFEFE;
-    border: none;
-    border-radius: 0.4rem;
-    transition: 0.2s;
-    cursor: pointer;
-    background: var(--primary-dark);
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    margin-bottom: 2px;
+.card-container .card button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #fffefe;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+  background: var(--primary-dark);
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-bottom: 2px;
 }
-.card-container .card button:hover{
+.card-container .card button:hover {
   transform: translateY(-5px);
 }
 /* Clubs cards */
 /* Courses starts */
-#courses .row .col-12{
+#courses .row .col-12 {
   display: flex;
   justify-content: center;
 }
-.course-card{
+.course-card {
   width: 330px;
   height: 550px;
   background-color: white;
@@ -538,63 +535,110 @@ header .navbar-mobile {
   border: 3px solid #eef0ef;
   box-shadow: 0 32px 54px 0 rgb(0 0 0 / 10%);
   margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.5 ease;
 }
-.row .course-card{
+.course-card:hover{
+  transform: scale(1.05);
+}
+.row .course-card {
   padding-right: 0;
   padding-left: 0;
 }
-.course-card .course-info{
+.course-card .course-info {
   position: relative;
   padding: 20px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
 }
-.course-info .main-info{
+.course-info .main-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 5px 10px;
 }
-.course-info .main-info p:nth-child(2){
-    font-weight: 700;
-    font-size: 20px;
-    color: #013289;
+.course-info .main-info p:nth-child(2) {
+  font-weight: 700;
+  font-size: 20px;
+  color: #013289;
 }
-.course-card .course-info h3{
+.course-card .course-info h3 {
   margin-top: -10px;
   color: #37423b;
   transition: 0.3s;
   font-size: 24px;
 }
-.course-card .course-info>div>p{
+.course-card .course-info > div > p {
   font-size: 16px;
   text-indent: 50px;
   margin-bottom: 60px;
 }
-.course-author-maybe .author .author-img{
+.course-author-maybe .author .author-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
 }
-.course-author-maybe{
+.course-author-maybe {
   justify-content: space-between;
   align-items: center;
 }
-.course-author-maybe .author .author-img img{
-  width: 100%;height: 100%;
+.course-author-maybe .author .author-img img {
+  width: 100%;
+  height: 100%;
 }
-.course-author-maybe .author{
+.course-author-maybe .author {
   display: flex;
   align-items: center;
 }
-.coursetext{
+.coursetext {
   text-align: center;
   font-size: 26px;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
-.coursetext a{
+.coursetext:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+.coursetext a {
   text-decoration: none;
 }
 /* Course ends */
+/* Quick Links Section starts */
+.link-section h1 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+}
+.link-section .q-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.link-section .q-links button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #124265;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 30px 10px;
+  text-align: center;
+  transition: all 1s ease;
+}
+.link-section .q-links button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1px 0 0 rgb(139 141 157 / 5%), 0 5px 10px 0 rgb(65 71 108 / 15%);
+}
+.link-section .q-links button a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Quick Links Section ends */
