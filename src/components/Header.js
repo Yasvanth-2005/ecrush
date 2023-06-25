@@ -61,50 +61,50 @@ export default function Header() {
               </Link>
             </li>
             <li className="dropdown">
-              <a href="/" id="navElement" onClick={mobileDropDown}>
+              <a href="#" id="navElement" onClick={mobileDropDown}>
                 <span>Clubs</span>
                 <i className="bi bi-chevron-down"></i>
               </a>
               <ul ref={mobileDropDownRef}>
                 <li style={{ color: "white" }}>
-                  <Link to="/E-Library">E-Library</Link>
+                  <Link to="/club/e-library">E-Library</Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/E-skills">E-Skills</Link>
+                  <Link to="/club/e-skills">E-Skills</Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/Soft Skill & Communication">
+                  <Link to="/club/soft_and_communication">
                     Soft & Communication SkillS
                   </Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/Content writing">Content Writing</Link>
+                  <Link to="/club/content_writing">Content Writing</Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/Photography">Photography</Link>
+                  <Link to="/club/photography">Photography</Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/Quiz">Quiz</Link>
+                  <Link to="/club/quiz">Quiz</Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/E-Crush pods">Podcasting</Link>
+                  <Link to="/club/podcasting">Podcasting</Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/web development">Web Development</Link>
+                  <Link to="/club/web_development">Web Development</Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/Desiging team">Desiging</Link>
+                  <Link to="/club/desiging">Desiging</Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/Promotion & marketing">
+                  <Link to="/club/promotion_and_marketing">
                     Promotions & Marketing
                   </Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/Technical.">Technical</Link>
+                  <Link to="/club/technical">Technical</Link>
                 </li>
                 <li style={{ color: "white" }}>
-                  <Link to="/InfraTeam">Infra Team</Link>
+                  <Link to="/club/infra">Infra Team</Link>
                 </li>
               </ul>
             </li>

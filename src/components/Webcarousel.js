@@ -121,7 +121,7 @@ const MyCarousel = () => {
       removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
       deviceType={deviceType}
       showDots={showDots}
-      customTransition="all .5"
+      customTransition="all 0.5s ease"
       transitionDuration={500}
     >
       <div className="d-flex justify-content-center align-items-center">

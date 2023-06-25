@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import Webcarousel from "../components/Webcarousel"
 
@@ -59,29 +60,29 @@ const ClubCard = (props) => {
 }
 
 const clubCardsInfo = [
-    {id:1,img:c1,bgcolor:"white",title:"E-Library",desc:"Explore through the shelves of our library...",link:"/E-library"},
-    {id:2,img:c2,bgcolor:"#E7E0F3",title:"E-Skills",desc:"Enhance skills into strongest weapons...",link:"/E-skills"},
-    {id:3,img:c3,bgcolor:"white",title:"Soft and Communication",desc:"Improves you in eloquence and fluency...",link:"/Soft-and-Communication"},
-    {id:4,img:c4,bgcolor:"rgba(165, 185, 255, 0.33)",title:"Content Writing",desc:"Build a pavement for your voice and visions...",link:"/Content-Writing"},
-    {id:5,img:c5,bgcolor:"#C5E6C0",title:"Photography",desc:"Captures our charming moments...",link:"/Photography"},
-    {id:6,img:c6,bgcolor:"white",title:"Quiz",desc:"Unlocks your knowledge and skills...",link:"/Quiz"},
-    {id:7,img:c7,bgcolor:"rgba(227, 228, 164, 0.62)",title:"Podcasting",desc:"This team works on giving voice over...",link:"/Podcasting"},
-    {id:8,img:c8,bgcolor:"white",title:"Web Development",desc:"We make progress with lines of code...",link:"/Web-Development"},
-    {id:9,img:c9,bgcolor:"white",title:"Designing",desc:"Your creativity maintains our dignity...",link:"/Designing"},
-    {id:10,img:c10,bgcolor:"rgba(183, 223, 225, 0.56)",title:"Technical",desc:"Brings us together through technology...",link:"/Technical"},
-    {id:11,img:c11,bgcolor:"white",title:"Promotion & Marketing",desc:"Best way to connect and reach you...",link:"/Promotion-and-Marketing"},
-    {id:12,img:c12,bgcolor:"rgba(226, 190, 216, 0.48)",title:"Infra Team",desc:"We teach you real-time dedication...",link:"/Infra-Team"}
+    {id:1,img:c1,bgcolor:"white",title:"E-Library",desc:"Explore through the shelves of our library...",link:"/club/e-library"},
+    {id:2,img:c2,bgcolor:"#E7E0F3",title:"E-Skills",desc:"Enhance skills into strongest weapons...",link:"/club/e-skills"},
+    {id:3,img:c3,bgcolor:"white",title:"Soft and Communication",desc:"Improves you in eloquence and fluency...",link:"/club/soft_and_communication"},
+    {id:4,img:c4,bgcolor:"rgba(165, 185, 255, 0.33)",title:"Content Writing",desc:"Build a pavement for your voice and visions...",link:"/club/content_writing"},
+    {id:5,img:c5,bgcolor:"#C5E6C0",title:"Photography",desc:"Captures our charming moments...",link:"/club/photography"},
+    {id:6,img:c6,bgcolor:"white",title:"Quiz",desc:"Unlocks your knowledge and skills...",link:"/club/quiz"},
+    {id:7,img:c7,bgcolor:"rgba(227, 228, 164, 0.62)",title:"Podcasting",desc:"This team works on giving voice over...",link:"/club/podcasting"},
+    {id:8,img:c8,bgcolor:"white",title:"Web Development",desc:"We make progress with lines of code...",link:"/club/web_development"},
+    {id:9,img:c9,bgcolor:"white",title:"Designing",desc:"Your creativity maintains our dignity...",link:"/club/desiging"},
+    {id:10,img:c10,bgcolor:"rgba(183, 223, 225, 0.56)",title:"Technical",desc:"Brings us together through technology...",link:"/club/technical"},
+    {id:11,img:c11,bgcolor:"white",title:"Promotion & Marketing",desc:"Best way to connect and reach you...",link:"/club/promotion_and_marketing"},
+    {id:12,img:c12,bgcolor:"rgba(226, 190, 216, 0.48)",title:"Infra Team",desc:"We teach you real-time dedication...",link:"/club/infra"}
 ];
 
 const CourseCard = (props) => {
   return (
     <div className="col-12 col-lg-4 col-md-6">
-                <div class="course-card">
+                <div className="course-card">
                   <div className="course-img">
                     <img src={props.img} className="img-fluid"/>
                   </div>
                   <div className="course-info">
-                     <div class="end-alignment">
+                     <div className="end-alignment">
                        <div className="main-info">
                           <p>No.of Videos : {props.vn}</p>
                           <p>{props.price}</p>
@@ -289,6 +290,8 @@ export default function Home() {
              <Webcarousel />
           </div>
       </section>
+
+      <Footer />
     </>
   );
 }
