@@ -22,6 +22,8 @@ import Soft_skills from './pages/clubs/Soft_skills'
 import Technical from './pages/clubs/Technical'
 import Web_Dev from './pages/clubs/Web_development'
 
+import Core from "./pages/about/Core"
+import Advisory from "./pages/about/Advisory"
 
 function App() {
   return (
@@ -47,6 +49,9 @@ function App() {
           <Route path="/club/technical" element={<Technical />} />
           <Route path="/club/web_development" element={<Web_Dev />} />
           
+          <Route path="/about/core-team" element={<Core />} />
+          <Route path="/about/advisory-team" element={<Advisory />} />
+
       </Routes>
   );
 }

@@ -6,9 +6,9 @@ export default function Footer() {
     <footer>
       <div className="footer-info" id="footer">
         <div className="container">
-          <div class="row footer-top">
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h4 class="text-white">E-Crush</h4>
+          <div className="row footer-top">
+            <div className="col-lg-3 col-md-6 footer-contact">
+              <h4 className="text-white">E-Crush</h4>
               <p>
                 Rajiv Gandhi University of Knowledge and Technologies,
                 <br />
@@ -21,52 +21,52 @@ export default function Footer() {
               </p>
             </div>
 
-            <div class="col-lg-2 col-md-6 footer-links">
-              <h4 class="text-white">Useful Links</h4>
+            <div className="col-lg-2 col-md-6 footer-links">
+              <h4 className="text-white">Useful Links</h4>
               <ul>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <Link to="/">Home</Link>
+                  <i className="bx bx-chevron-right"></i> <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>{" "}
+                  <i className="bx bx-chevron-right"></i>{" "}
                   <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>{" "}
+                  <i className="bx bx-chevron-right"></i>{" "}
                   <Link to="/events">Events</Link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>{" "}
+                  <i className="bx bx-chevron-right"></i>{" "}
                   <Link to="/courses">Courses</Link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>{" "}
+                  <i className="bx bx-chevron-right"></i>{" "}
                   <Link to="/contact">Contact us</Link>
                 </li>
               </ul>
             </div>
 
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4 class="text-white">Our Services</h4>
+            <div className="col-lg-3 col-md-6 footer-links">
+              <h4 className="text-white">Our Services</h4>
               <ul>
                 <li>
-                  <i class="bx bx-chevron-right"></i>{" "}
+                  <i className="bx bx-chevron-right"></i>{" "}
                   <Link to="/club/e-library">E-Library</Link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>{" "}
+                  <i className="bx bx-chevron-right"></i>{" "}
                   <Link to="/club/e-skills">E-Skills</Link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>{" "}
+                  <i className="bx bx-chevron-right"></i>{" "}
                   <Link href="/club/quiz">Quiz</Link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>{" "}
+                  <i className="bx bx-chevron-right"></i>{" "}
                   <Link to="/club/web_development">Web Development</Link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>{" "}
+                  <i className="bx bx-chevron-right"></i>{" "}
                   <Link to="/club/soft_and_communication">
                     Communtaions Skills
                   </Link>
@@ -74,8 +74,8 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div class="col-lg-4 col-md-6 footer-newsletter">
-              <h4 class="text-white">Comment us</h4>
+            <div className="col-lg-4 col-md-6 footer-newsletter">
+              <h4 className="text-white">Comment us</h4>
               <p>Give your valuable suggestions</p>
               <form action="apis/add_suggestions.php" method="post">
                 <input type="email" name="message" />
@@ -83,31 +83,31 @@ export default function Footer() {
               </form>
               <br />
 
-              <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <div class="icons">
+              <div className="social-links text-center text-md-right pt-3 pt-md-0">
+                <div className="icons">
                   <a
                     href="https://www.youtube.com/channel/UCG7OmgaVdsa0QASdBsHNo-w"
-                    class="yt"
+                    className="yt"
                   >
-                    <i class="bi bi-youtube"></i>
+                    <i className="bi bi-youtube"></i>
                   </a>
-                  <a href="https://www.facebook.com/ecrush.rgukt.9" class="fb">
-                    <i class="bi bi-facebook"></i>
+                  <a href="https://www.facebook.com/ecrush.rgukt.9" className="fb">
+                    <i className="bi bi-facebook"></i>
                   </a>
-                  <a href="https://twitter.com/ERgukt?s=08" class="twitter">
-                    <i class="bi bi-twitter"></i>
+                  <a href="https://twitter.com/ERgukt?s=08" className="twitter">
+                    <i className="bi bi-twitter"></i>
                   </a>
                   <a
                     href="https://instagram.com/ecrushrguktn?utm_medium=copy_link"
-                    class="insta"
+                    className="insta"
                   >
-                    <i class="bi bi-instagram"></i>
+                    <i className="bi bi-instagram"></i>
                   </a>
                   <a
                     href="http://www.linkedin.com/in/ecrush-rguktn"
-                    class="linkedin"
+                    className="linkedin"
                   >
-                    <i class="bi bi-linkedin"></i>
+                    <i className="bi bi-linkedin"></i>
                   </a>
                 </div>
               </div>
