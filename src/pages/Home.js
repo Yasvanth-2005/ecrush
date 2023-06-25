@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
+import Webcarousel from "../components/Webcarousel"
 
 import heroImg from "../images/hero-img.png";
 import ci1 from "../images/photography/1.webp";
@@ -280,6 +281,13 @@ export default function Home() {
       <section id="quick-links">
           <SectionTitle title="Quick Links" />
           {qLinkSection.map(link => <Qlinks key={link.id} title={link.title}  l1={link.l1} l1n={link.l1n} l2={link.l2} l2n={link.l2n} l3={link.l3} l3n={link.l3n} l4={link.l4} l4n={link.l4n}/>)}
+      </section>
+
+      <section id="web-developers">
+          <div className="container">
+             <SectionTitle title="WEBSITE DEVELOPERS" />
+             <Webcarousel />
+          </div>
       </section>
     </>
   );

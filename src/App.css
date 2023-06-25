@@ -615,10 +615,10 @@ header .navbar-mobile {
   margin-bottom: 20px;
 }
 .link-section .q-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  place-content: center;
 }
 .link-section .q-links button {
   width: 150px;
@@ -641,4 +641,107 @@ header .navbar-mobile {
   text-decoration: none;
   font-size: 17px;
 }
+@media (max-width:720px){
+  .link-section .q-links {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 /* Quick Links Section ends */
+/*Web developers section */
+.webcard{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 300px;
+    transition: all 0.5 ease;
+    cursor: pointer;
+}
+.webcard::before{
+  content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 125px;
+   height: 125px;
+   border-top:3px solid black;
+   border-left:3px solid black;
+   transition: all 0.5s ease;
+   z-index:2;
+}
+.webcard::after{
+  content: '';
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 125px;
+   height: 125px;
+   border-bottom:3px solid black;
+   border-right:3px solid black;
+   transition: all 1s ease;
+}
+.webcard:hover::before{
+  transform: translate(10px,10px);
+}
+.webcard:hover::after{
+  transform: translate(-10px,-10px);
+}
+.webcard>div.web-img>img{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.webcard:hover .web-img img{
+  transform: scale(1.05);
+  filter:blur(5px);
+}
+.web-info{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:5;
+  padding: 50% 4%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.web-info h2{
+    font-size: 20px;
+    color: black;
+    margin-top: -30px;
+    opacity: 0;
+    padding: 0 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: translateY(-100px);
+    transition: all 900ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s;
+    border-radius: 10px;
+}
+.web-info ul{
+  margin: 20px 0;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s;
+  display: inline-flex;
+  list-style-type: none;
+}
+.web-info ul a{
+  color:black;
+  margin: 0px 10px;
+}
+.web-info i{
+  font-size: 24px;
+}
+.web-info h2 span{
+  font-size:12px;
+}
+.webcard:hover .web-info h2,.webcard:hover .web-info ul{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
