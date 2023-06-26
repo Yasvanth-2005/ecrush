@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import Webcarousel from "../components/Webcarousel"
+import SectionTitle from "../components/SectionTitle"
 
 import heroImg from "../images/hero-img.png";
 import ci1 from "../images/photography/1.webp";
@@ -30,13 +31,6 @@ import course2 from "../images/courses/E grammar.webp";
 import course3 from "../images/courses/Airforce.webp";
 import nmrsir from "../images/courses/nmrsir.webp";
 
-const SectionTitle = (props) => {
-  return (
-    <div className="section-title">
-      <h1>{props.title}</h1>
-    </div>
-  );
-};
 
 const ClubCard = (props) => {
     return(
