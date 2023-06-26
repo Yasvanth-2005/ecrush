@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-// import "bootstrap-icons/font/bootstrap-icons.css";
+import "react-multi-carousel/lib/styles.css"
 
 import siddu from "../images/trainers/siddhu.jpeg";
 import rohita from "../images/trainers/siddhu.webp";

@@ -1271,3 +1271,155 @@ footer a{
 .justify-content-space-between{
   justify-content: space-between;
 }
+/*e-lib starts */
+.e.head{
+  background-image:url("./images/club-banners/library.jpg");
+  background-size: cover;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: multiply;
+}
+.elib-main p{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.lib-card{
+  width: 260px;
+  height: 260px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+.lib-card img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.lib-card:hover img{
+  transform: scale(1.05);
+}
+.lib-card h5{
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index:3;
+  color:white;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.eskill.head{
+  background-image: url("./images/club-banners/soft-and-communication.webp");
+}
+.content.head{
+  background-image: url("./images/club-banners/content_writing.webp");
+}
+.photography.head{
+  background-image: url("./images/club-banners/photography.webp");
+}
+.photo-card{
+  margin: 10px;
+  border-radius: 10px;
+  transition: scale 0.5s ease;
+  overflow: hidden; 
+}
+.photo-card{
+  width: 100%;
+}
+.photo-card:hover img{
+  transform: scale(1.05);
+}
+.quiz.head{
+  background-image: url("./images/club-banners/quiz.jpg");
+}
+.pods.head{
+  background-image: url("./images/club-banners/podcast.jpg");
+}
+.web.head{
+  background-image: url("./images/club-banners/web.jpg");
+}
+.Desing.head{
+  background-image: url("./images/club-banners/graphic_designing1.webp");
+}
+.promo.head{
+  background-image: url("./images/club-banners/promotions.webp");
+}
+.tech.head{
+  background-image: url("./images/club-banners/techinacal.jpg");
+}
+.infra.head{
+  background-image: url("./images/club-banners/graphic_designing1.webp");
+}
+.sac.head{
+  background-image: url("./images/club-banners/soft-and-communication.webp");
+}
+
+/*core and advisory section */
+.c-card .c-img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.c-card{
+  margin: 20px;
+  background: #f2f3f7;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
+  border-radius: 20px;
+  padding: 50px 20px;
+}
+.c-card h3{
+  margin-top: 20px;
+}
+.c-card h5{
+  margin-top: 5px;
+  color: var(--primary);
+}
+.c-card h6{
+  font-size:14px;
+  color: var(--primary-dark);
+}
+.c-card ul{
+  list-style-type:none;
+  display: inline-flex;
+  padding-right: 20px;
+  margin-top: 10px;
+}
+.c-card ul li{
+  margin: 0px 20px;
+  font-size: 18px;
+}
+.c-card a{
+  color:black;
+}
+.c-card ul li a:hover{
+  color:var(--primary);
+}
+.sa-card{
+  width: 300px;
+  height: 350px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+.sa-card .img{
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 25% 50%;
+  overflow: hidden;
+  transition:all 0.8s ease;
+}
+.sa-card h4{
+  text-align: center;
+  margin-top: 5px;
+  padding: 0px 20px;
+}
+.sa-card .img img{
+  width: 100%;
+  height: 100%;
+}
