@@ -397,7 +397,7 @@ header .navbar-mobile {
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
-  margin-left: 100px;
+  margin-left: 80px;
   font-family: "open sans", sans-serif;
   animation: type 4s steps(40) 1s infinite normal;
   overflow: hidden;
@@ -408,7 +408,7 @@ header .navbar-mobile {
     width: 0;
   }
   100% {
-    width: 300px;
+    width: 250px;
   }
 }
 .hero-content .heading p {

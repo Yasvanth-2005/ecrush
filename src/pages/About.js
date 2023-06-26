@@ -67,19 +67,19 @@ export default function About() {
                   <div className="carousel-item active">
                     <img className="img-fluid" src={ci1} alt="" />
                   </div>
-                  <div className="carousel-item active">
+                  <div className="carousel-item">
                     <img className="img-fluid" src={ci2} alt="" />
                   </div>
-                  <div className="carousel-item active">
+                  <div className="carousel-item">
                     <img className="img-fluid" src={ci3} alt="" />
                   </div>
-                  <div className="carousel-item active">
+                  <div className="carousel-item">
                     <img className="img-fluid" src={ci4} alt="" />
                   </div>
-                  <div className="carousel-item active">
+                  <div className="carousel-item">
                     <img className="img-fluid" src={ci5} alt="" />
                   </div>
-                  <div className="carousel-item active">
+                  <div className="carousel-item">
                     <img className="img-fluid" src={ci6} alt="" />
                   </div>
                 </div>
