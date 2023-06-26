@@ -8,22 +8,23 @@ import Courses from "./pages/Courses";
 import Events from "./pages/Events";
 import Trainers from "./pages/Trainers";
 
-import E_library from './pages/clubs/E_library'
-import E_skills from './pages/clubs/E_skills'
-import Content_writing from './pages/clubs/Content_writing'
-import Desiging from './pages/clubs/Desiging'
-import Infra from './pages/clubs/Infra'
-import Photography from './pages/clubs/Photography'
-import Podcasting from './pages/clubs/Podcasting'
-import Promotion_and_marketing from './pages/clubs/Promotion_and_marketing'
-import Quiz from './pages/clubs/Quiz'
-import Soft_and_communications from './pages/clubs/Soft_and_communications'
-import Soft_skills from './pages/clubs/Soft_skills'
-import Technical from './pages/clubs/Technical'
-import Web_Dev from './pages/clubs/Web_development'
+import E_library from './pages/E_library'
+import E_skills from './pages/E_skills'
+import Content_writing from './pages/Content_writing'
+import Desiging from './pages/Desiging'
+import Infra from './pages/Infra'
+import Photography from './pages/Photography'
+import Podcasting from './pages/Podcasting'
+import Promotion_and_marketing from './pages/Promotion_and_marketing'
+import Quiz from './pages/Quiz'
+import Soft_and_communications from './pages/Soft_and_communications'
+import Soft_skills from './pages/Soft_skills'
+import Technical from './pages/Technical'
+import Web_Dev from './pages/Web_development'
 
-import Core from "./pages/about/Core"
-import Advisory from "./pages/about/Advisory"
+import Core from "./pages/Core"
+import Advisory from "./pages/Advisory"
+import CourseDetails from "./pages/CourseDetails";
 
 function App() {
   return (
@@ -51,6 +52,8 @@ function App() {
           
           <Route path="/about/core-team" element={<Core />} />
           <Route path="/about/advisory-team" element={<Advisory />} />
+
+          <Route path="/courses/:id" element={<CourseDetails />}/>
 
       </Routes>
   );

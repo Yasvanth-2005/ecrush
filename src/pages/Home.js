@@ -70,7 +70,8 @@ const clubCardsInfo = [
 
 const CourseCard = (props) => {
   return (
-    <div className="col-12 col-lg-4 col-md-6">
+    <div className="col-12 col-lg-4 col-md-6 ccor">
+          <Link to={props.link}>
                 <div className="course-card">
                   <div className="course-img">
                     <img src={props.img} className="img-fluid"/>
@@ -96,14 +97,15 @@ const CourseCard = (props) => {
                      </div>
                   </div>
                 </div>
+        </Link>
     </div>
   )
 }
 
 const courseCardInfo = [
-  {id:1,img:course1,vn:55,price:"Free",title:"Spoken English Classes",sub:"This course provides you the content for learning English and you'll be taught how to apply it in your daily communication.",aimg:nmrsir,n1:19980,n2:776,author:"NMR.Polagni"},
-  {id:2,img:course2,vn:4,price:"Free",title:"English Grammar",sub:"Grammar is the basic structure of any language. This course introduces you the different aspects of grammar in English language.",aimg:nmrsir,n1:799,n2:251,author:"NMR.Polagni"},
-  {id:3,img:course3,vn:7,price:"Free",title:"Indian Air Force",sub:"This course helps many students and aspirants in learning English required for cracking IAF examination.",aimg:nmrsir,n1:57,n2:14,author:"NMR.Polagni"}
+  {id:1,img:course1,vn:55,price:"Free",title:"Spoken English Classes",sub:"This course provides you the content for learning English and you'll be taught how to apply it in your daily communication.",aimg:nmrsir,n1:19980,n2:776,author:"NMR.Polagni",link:"/courses/1"},
+  {id:2,img:course2,vn:4,price:"Free",title:"English Grammar",sub:"Grammar is the basic structure of any language. This course introduces you the different aspects of grammar in English language.",aimg:nmrsir,n1:799,n2:251,author:"NMR.Polagni",link:"/courses/2"},
+  {id:3,img:course3,vn:7,price:"Free",title:"Indian Air Force",sub:"This course helps many students and aspirants in learning English required for cracking IAF examination.",aimg:nmrsir,n1:57,n2:14,author:"NMR.Polagni",link:"/courses/3"}
 ]
 
 const Qlinks = (props) => {
@@ -267,7 +269,7 @@ export default function Home() {
       <SectionTitle title="courses" />
          <div className="container">
            <div className="row">
-              {courseCardInfo.map(card => <CourseCard key={card.id} img={card.img} title={card.title} vn={card.vn} price={card.price} n1={card.n1} n2={card.n2} sub={card.sub} aimg={card.aimg} author={card.author}/>)}
+              {courseCardInfo.map(card => <CourseCard key={card.id} link={card.link} img={card.img} title={card.title} vn={card.vn} price={card.price} n1={card.n1} n2={card.n2} sub={card.sub} aimg={card.aimg} author={card.author}/>)}
            </div>
            <h2 className="coursetext"><Link to="/courses">Explore more<span>&rarr;</span></Link></h2>
          </div>
