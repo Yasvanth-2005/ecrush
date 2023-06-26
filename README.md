@@ -4,7 +4,7 @@ This website has everything about organization inclusing its clubs and past work
 It is Made using React Js primarily
 
 ## Visit Website
-<a href="ecrush-y.netlify.app">Click Here</a> to visit website
+<a href="https://ecrush-y.netlify.app">Click Here</a> to visit website
 
 ## This Website is made with
 <ul>
