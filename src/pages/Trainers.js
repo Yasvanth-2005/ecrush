@@ -1,52 +1,108 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Link } from 'react-router-dom';
-import SectionTitle from '../components/SectionTitle';
-import siddu from "../images/trainers/siddhu.jpeg"
-
+import { Link } from "react-router-dom";
+import SectionTitle from "../components/SectionTitle";
+import axios from "axios";
 
 export default function Trainers() {
+  const [content, setContent] = useState(false);
+  const [data, setData] = useState({});
+  useEffect(() => {
+    const serverURL = "https://ecrushbackend.onrender.com/api/trivia";
+    axios
+      .get(serverURL)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => console.log(err.message));
+  }, []);
+
+  useEffect(() => {
+    if (Array.isArray(data) && data.length !== 0) {
+      setContent(true);
+    }
+  }, [data]);
   return (
     <>
       <Header />
 
-      <div className='head'>
-         <h2 className='head-title'>Weekend Trivia</h2>
-         <p className='pt-2'>Test your knowledge.</p>
+      <div className="head">
+        <h2 className="head-title">Weekend Trivia</h2>
+        <p className="pt-2">Test your knowledge.</p>
       </div>
 
-      <div className='click-here-to-attempt'>
-        <h1><a href="#">Click Here</a> to attempt quiz</h1>
-      </div>
+      {content ? (
+        <>
+          <div className="click-here-to-attempt">
+            <h1>
+              <a href={data[0].link} target="_blank">
+                Click Here
+              </a>{" "}
+              to attempt quiz
+            </h1>
+          </div>
 
-      <SectionTitle title="Winners"/>
-      <div className='container mb-4'>
-        <div className='row'>
-          <div className='col-12 col-md-6 col-lg-4'>
-              <div className='winner-card d-flex justify-content-center align-items-center' style={{flexDirection:"column"}}>
-                <img src={siddu} className='img-fluid' style={{width:"300px",height:"320px"}}/>
-                 <h3>Yasvanth Hanumantu</h3>
-                 <p>N210368</p>
+          <SectionTitle title="Previous Week Winners" />
+          <div className="container mb-4">
+            <div className="row">
+              <div className="col-12 col-md-6 col-lg-4 mt-3">
+                <div
+                  className=" d-flex justify-content-center align-items-center"
+                  style={{
+                    flexDirection: "column",
+                    padding: "10px",
+                    boxShadow:
+                      "0 1px 0 0 rgb(139 141 157 / 5%), 0 5px 10px 0 rgb(65 71 108 / 15%",
+                  }}
+                >
+                  <h3 className="mt-2">{data[0].winners.name1}</h3>
+                  <p>{data[0].winners.id1}</p>
+                </div>
               </div>
+              <div className="col-12 col-md-6 col-lg-4 mt-3">
+                <div
+                  className=" d-flex justify-content-center align-items-center"
+                  style={{
+                    flexDirection: "column",
+                    padding: "10px",
+                    boxShadow:
+                      "0 1px 0 0 rgb(139 141 157 / 5%), 0 5px 10px 0 rgb(65 71 108 / 15%",
+                  }}
+                >
+                  <h3 className="mt-2">{data[0].winners.name2}</h3>
+                  <p>{data[0].winners.id2}</p>
+                </div>
+              </div>
+              <div className="col-12 col-md-6 col-lg-4 mt-3">
+                <div
+                  className=" d-flex justify-content-center align-items-center"
+                  style={{
+                    flexDirection: "column",
+                    padding: "10px",
+                    boxShadow:
+                      "0 1px 0 0 rgb(139 141 157 / 5%), 0 5px 10px 0 rgb(65 71 108 / 15%",
+                  }}
+                >
+                  <h3 className="mt-2">{data[0].winners.name3}</h3>
+                  <p>{data[0].winners.id3}</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className='col-12 col-md-6 col-lg-4'>
-              <div className='winner-card d-flex justify-content-center align-items-center' style={{flexDirection:"column"}}>
-                <img src={siddu} className='img-fluid' style={{width:"300px",height:"320px"}}/>
-                 <h3>Yasvanth Hanumantu</h3>
-                 <p>N210368</p>
-              </div>
-          </div>
-          <div className='col-12 col-md-6 col-lg-4'>
-              <div className='winner-card d-flex justify-content-center align-items-center' style={{flexDirection:"column"}}>
-                <img src={siddu} className='img-fluid' style={{width:"300px",height:"320px"}}/>
-                 <h3>Yasvanth Hanumantu</h3>
-                 <p>N210368</p>
-              </div>
+        </>
+      ) : (
+        <div
+          className=" d-flex align-items-center justify-content-center"
+          style={{ height: "300px" }}
+        >
+          <div className="spinner-border" role="status">
+            <span className="sr-only"></span>
           </div>
         </div>
-      </div>
+      )}
+
       <Footer />
     </>
-  )
+  );
 }
