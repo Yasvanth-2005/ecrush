@@ -56,6 +56,20 @@ export default function Trainers() {
                       "0 1px 0 0 rgb(139 141 157 / 5%), 0 5px 10px 0 rgb(65 71 108 / 15%",
                   }}
                 >
+                  <div
+                    style={{
+                      width: "150px",
+                      height: "150px",
+                      overflow: "hidden",
+                      borderRadius: "50%",
+                    }}
+                  >
+                    <img
+                      alt="winner1"
+                      className="img-fluid"
+                      src={`https://intranet.rguktn.ac.in/SMS/usrphotos/user/${data[0].winners.id1}.jpg`}
+                    />
+                  </div>
                   <h3 className="mt-2">{data[0].winners.name1}</h3>
                   <p>{data[0].winners.id1}</p>
                 </div>
@@ -70,6 +84,20 @@ export default function Trainers() {
                       "0 1px 0 0 rgb(139 141 157 / 5%), 0 5px 10px 0 rgb(65 71 108 / 15%",
                   }}
                 >
+                  <div
+                    style={{
+                      width: "150px",
+                      height: "150px",
+                      overflow: "hidden",
+                      borderRadius: "50%",
+                    }}
+                  >
+                    <img
+                      alt="winner1"
+                      className="img-fluid"
+                      src={`https://intranet.rguktn.ac.in/SMS/usrphotos/user/${data[0].winners.id2}.jpg`}
+                    />
+                  </div>
                   <h3 className="mt-2">{data[0].winners.name2}</h3>
                   <p>{data[0].winners.id2}</p>
                 </div>
@@ -84,6 +112,20 @@ export default function Trainers() {
                       "0 1px 0 0 rgb(139 141 157 / 5%), 0 5px 10px 0 rgb(65 71 108 / 15%",
                   }}
                 >
+                  <div
+                    style={{
+                      width: "150px",
+                      height: "150px",
+                      overflow: "hidden",
+                      borderRadius: "50%",
+                    }}
+                  >
+                    <img
+                      alt="winner1"
+                      className="img-fluid"
+                      src={`https://intranet.rguktn.ac.in/SMS/usrphotos/user/${data[0].winners.id3}.jpg`}
+                    />
+                  </div>
                   <h3 className="mt-2">{data[0].winners.name3}</h3>
                   <p>{data[0].winners.id3}</p>
                 </div>

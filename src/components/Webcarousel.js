@@ -1,75 +1,83 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css"
+import "react-multi-carousel/lib/styles.css";
 
 import siddu from "../images/trainers/siddhu.jpeg";
-import rohita from "../images/trainers/siddhu.webp";
-import anand from "../images/trainers/anand.jpg";
-import arun from "../images/trainers/arun.jpg";
+import yash from "../images/trainers/yash.jpeg";
 
 const WebCard = (props) => {
   return (
-        <div className="webcard">
-          <div className="web-img">
-            <img src={props.img} alt="Siddhu" />
-          </div>
-          <div className="web-info">
-            <h2 className="web-name">
-              {props.name} <br /> <span>{props.pos}</span>
-            </h2>
-            <ul className="social-link">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/siddartha-yernagula-a4745b238/"
-                  className="bi bi-linkedin"
-                  aria-hidden="true"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/siddhu_from_srikakulam/"
-                  className="bi bi-instagram"
-                  aria-hidden="true"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/siddhu_from_srikakulam/"
-                  className="bi bi-facebook"
-                  aria-hidden="true"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/siddartha-yernagula-a4745b238/"
-                  className="bi bi-twitter"
-                  aria-hidden="true"
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <div className="webcard">
+      <div className="web-img">
+        <img src={props.img} alt={props.name} />
+      </div>
+      <div className="web-info" style={{ zIndex: "10" }}>
+        <h2 className="web-name">
+          {props.name} <br /> <span>{props.pos}</span>
+        </h2>
+        <ul className="social-link">
+          <li>
+            <a
+              target="_blank"
+              href={props.linkedin}
+              className="bi bi-linkedin"
+              aria-hidden="true"
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href={props.insta}
+              className="bi bi-instagram"
+              aria-hidden="true"
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href={props.github}
+              className="bi bi-github"
+              aria-hidden="true"
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
 
 const webDevs = [
-    {id:1,img:siddu,name:"Siddartha Yernagula",pos:"Full Stack Web Developer"},
-    {id:2,img:rohita,name:"Rohita Uppala",pos:"Full Stack Web Developer"},
-    {id:3,img:anand,name:"Anand Prasad",pos:"Full Stack Web Developer"},
-    {id:4,img:arun,name:"MAT574",pos:"Full Stack Web Developer"}
-]
+  {
+    id: 1,
+    img: siddu,
+    name: "Siddartha Yernagula",
+    pos: "Full Stack Web Developer",
+    linkedin: "https://www.linkedin.com/in/siddartha-yernagula-a4745b238/",
+    insta: "https://www.instagram.com/siddhu_from_srikakulam/",
+    github: "https://www.linkedin.com/in/siddartha-yernagula-a4745b238/",
+  },
+  {
+    id: 2,
+    img: yash,
+    name: "Yasvanth Hanumantu",
+    pos: "Full Stack Web Developer",
+    insta: "https://www.instagram.com/yasvanth_2/",
+    linkedin: "https://www.linkedin.com/in/yasvanth-hanumantu-269789255",
+    github: "https://github.com/Yasvanth-2005",
+  },
+];
 
 const MyCarousel = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 2,
       slidesToSlide: 0,
     },
     tablet: {
       breakpoint: { max: 1024, min: 660 },
       items: 2,
-      slidesToSlide: 2,
+      slidesToSlide: 0,
     },
     mobile: {
       breakpoint: { max: 660, min: 0 },
@@ -89,7 +97,7 @@ const MyCarousel = () => {
         innerWidth >= responsive.tablet.breakpoint.min &&
         innerWidth <= responsive.tablet.breakpoint.max
       ) {
-        setDeviceType("tablet");
+        setDeviceType("desktop");
       } else {
         setDeviceType("mobile");
       }
@@ -117,23 +125,27 @@ const MyCarousel = () => {
       infinite={true}
       autoPlay={autoPlay}
       autoPlaySpeed={5000}
-      removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+      removeArrowOnDeviceType={["desktop", "mobile"]}
       deviceType={deviceType}
       showDots={showDots}
       customTransition="all 0.5s ease"
       transitionDuration={500}
     >
       <div className="d-flex justify-content-center align-items-center">
-        <WebCard key={webDevs[0].id} name={webDevs[0].name} img={webDevs[0].img} pos={webDevs[0].pos}/>
+        <WebCard
+          key={webDevs[0].id}
+          name={webDevs[0].name}
+          img={webDevs[0].img}
+          pos={webDevs[0].pos}
+        />
       </div>
       <div className="d-flex justify-content-center align-items-center">
-        <WebCard key={webDevs[1].id} name={webDevs[1].name} img={webDevs[1].img} pos={webDevs[1].pos}/>
-      </div>
-      <div className="d-flex justify-content-center align-items-center">
-        <WebCard key={webDevs[2].id} name={webDevs[2].name} img={webDevs[2].img} pos={webDevs[2].pos}/>
-      </div>
-      <div className="d-flex justify-content-center align-items-center">
-        <WebCard key={webDevs[3].id} name={webDevs[3].name} img={webDevs[3].img} pos={webDevs[3].pos}/>
+        <WebCard
+          key={webDevs[1].id}
+          name={webDevs[1].name}
+          img={webDevs[1].img}
+          pos={webDevs[1].pos}
+        />
       </div>
     </Carousel>
   );

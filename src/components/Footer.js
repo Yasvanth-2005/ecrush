@@ -25,7 +25,8 @@ export default function Footer() {
               <h4 className="text-white">Useful Links</h4>
               <ul>
                 <li>
-                  <i className="bx bx-chevron-right"></i> <Link to="/">Home</Link>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
                   <i className="bx bx-chevron-right"></i>{" "}
@@ -91,7 +92,10 @@ export default function Footer() {
                   >
                     <i className="bi bi-youtube"></i>
                   </a>
-                  <a href="https://www.facebook.com/ecrush.rgukt.9" className="fb">
+                  <a
+                    href="https://www.facebook.com/ecrush.rgukt.9"
+                    className="fb"
+                  >
                     <i className="bi bi-facebook"></i>
                   </a>
                   <a href="https://twitter.com/ERgukt?s=08" className="twitter">
@@ -117,7 +121,7 @@ export default function Footer() {
       </div>
       <div className="footer-credits">
         <p>
-          &copy; Copyright E-Crush. All Rights Reserved Designed by{" "}
+          &copy; Copyright E-Crush. All Rights are Reserved , Designed by{" "}
           <Link to="/club/web-development" style={{ textDecoration: "none" }}>
             {" "}
             Web Team E-Crush{" "}

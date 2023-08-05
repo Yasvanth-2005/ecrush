@@ -331,7 +331,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header transparent={true} />
 
       <section
         id="hero"

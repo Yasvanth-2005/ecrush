@@ -742,6 +742,7 @@ header .navbar-mobile {
   margin: 20px 0;
   padding: 0;
   opacity: 0;
+  z-index: 10;
   transform: translateY(100px);
   transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s;
   display: inline-flex;
@@ -1167,11 +1168,14 @@ footer a {
   pointer-events: none;
 }
 .cform .input-field input:focus ~ label,
-.cform .input-field textarea:focus ~ label {
+.cform .input-field textarea:focus ~ label,
+.cform .input-field textarea:valid ~ label,
+.cform .input-field input:valid ~ label {
   background-color: white;
   transform: translateY(-110%);
 }
-.cform .input-field textarea:focus {
+.cform .input-field textarea:focus,
+.cform .input-field textarea:valid {
   padding-top: 10px;
 }
 .cform .input-field input,

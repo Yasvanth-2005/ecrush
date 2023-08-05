@@ -1,14 +1,17 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import 'bootstrap/dist/js/bootstrap';
+import "bootstrap/dist/js/bootstrap";
 import logo from "../images/favicon.png";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-export default function Header() {
+export default function Header({ transparent }) {
   const navbarRef = useRef(null);
   const navToggleRef = useRef(null);
   const mobileDropDownRef = useRef(null);
+  const [userData, setUserData] = useState(
+    JSON.parse(localStorage.getItem("user"))
+  );
 
   const navToggle = () => {
     navbarRef.current.classList.toggle("navbar-mobile");
@@ -23,8 +26,38 @@ export default function Header() {
     }
   };
 
+  const [headerStyle, setHeaderStyle] = useState(
+    transparent
+      ? {
+          backgroundColor: "transparent",
+          boxShadow: "none",
+        }
+      : {
+          backgroundColor: "white",
+          boxShadow:
+            "0 1px 0 0 rgb(139 141 157 / 5%), 0 5px 10px 0 rgb(65 71 108 / 15%)",
+        }
+  );
+
+  if (transparent) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 600) {
+        setHeaderStyle({
+          backgroundColor: "white",
+          boxShadow:
+            "0 1px 0 0 rgb(139 141 157 / 5%), 0 5px 10px 0 rgb(65 71 108 / 15%)",
+        });
+      } else {
+        setHeaderStyle({
+          backgroundColor: "transparent",
+          boxShadow: "none",
+        });
+      }
+    });
+  }
+
   return (
-    <header className="fixed-top">
+    <header className="fixed-top" style={headerStyle}>
       <div className="container d-flex align-items-center">
         <Link to="/" className="logo me-auto">
           <img src={logo} alt="E-Crush" className="img-fluid" />
@@ -114,8 +147,48 @@ export default function Header() {
               </Link>
             </li>
           </ul>
+          <div>
+            {!userData ? (
+              <Link
+                to="/signin"
+                id="navElement"
+                style={{
+                  backgroundColor: "#093f5b",
+                  color: "white",
+                  padding: "5px 10px",
+                  borderRadius: "5px",
+                }}
+              >
+                Sign In
+              </Link>
+            ) : (
+              <div
+                className="round"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  overflow: "hidden",
+                  borderRadius: "50%",
+                  marginLeft: "5px",
+                  cursor: "pointer",
+                }}
+              >
+                {userData.picture == "" ? (
+                  <h3 align="center bg-primary">{userData.name.charAt(0)}</h3>
+                ) : (
+                  <img
+                    alt={userData.name}
+                    src={userData.picture}
+                    className="img-fluid"
+                    title={userData.family_name}
+                  />
+                )}
+              </div>
+            )}
+          </div>
           <i
             className="bi bi-list mobile-nav-toggle"
+            style={{ marginLeft: "10px" }}
             onClick={navToggle}
             ref={navToggleRef}
           ></i>
