@@ -5,21 +5,18 @@ import SectionTitle from "../components/SectionTitle";
 import axios from "axios";
 
 export default function Newspaper() {
-  const API_KEY = "c4c10b0383b542abbf8bbdab578302b0";
-  const [searchValue, setSearchValue] = useState("");
-  const [search, setSearch] = useState("");
   const [articles, setArticles] = useState([]);
   const [noArticles, setNoArticles] = useState(false);
 
   useEffect(() => {
-    axios
-      .get(
-        `https://newsapi.org/v2/top-headlines?country=in&q=${search}&apiKey=${API_KEY}`
-      )
-      .then((res) => {
+    try {
+      axios.get(`https://ecrushbackend.onrender.com/api/news`).then((res) => {
         setArticles(res.data.articles);
       });
-  }, [search]);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }, []);
 
   useEffect(() => {
     console.log(articles);
@@ -36,28 +33,6 @@ export default function Newspaper() {
       <Header />
       <section className="container" style={{ marginTop: "120px" }}>
         <SectionTitle title="News Articles" />
-        <form
-          className="my-3 mb-5 mx-auto"
-          style={{ width: "300px" }}
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSearch(searchValue);
-          }}
-        >
-          <div className="input-group">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search Articles"
-              aria-describedby="basic-addon2"
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
-            />
-            <span className="input-group-text" id="basic-addon2" type="submit">
-              <i className="bi bi-search"></i>
-            </span>
-          </div>
-        </form>
         <div className="row d-flex">
           {!noArticles ? (
             articles.map((article, index) => (
