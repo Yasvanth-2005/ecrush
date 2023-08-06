@@ -26,6 +26,7 @@ import SignIn from "./pages/SignIn";
 import Core from "./pages/Core";
 import Advisory from "./pages/Advisory";
 import CourseDetails from "./pages/CourseDetails";
+import Newspaper from "./pages/Newspaper";
 
 import Admin from "./admin/admin";
 import { GoogleOAuthProvider } from "@react-oauth/google";
@@ -66,6 +67,7 @@ function App() {
         <Route path="/courses/:id" element={<CourseDetails />} />
         <Route path="/admin" exact element={<Admin />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/newspaper" element={<Newspaper />} />
       </Routes>
     </GoogleOAuthProvider>
   );
