@@ -6,18 +6,6 @@ import axios from "axios";
 
 import contacting from "../images/contact .webp";
 
-// onSubmit={async (e) => {
-//               // https://ecrushbackend.onrender.com
-//               e.preventDefault();
-//               try {
-//                 await axios.post("http://localhost:8080/api/mail", mailData);
-//                 alert("Mail Sent");
-//               } catch (err) {
-//                 console.log(err.message);
-//                 alert("Mail not sent");
-//               }
-//             }}
-
 export default function Contact() {
   const [mailData, setMailData] = useState({
     name: "",
@@ -92,7 +80,26 @@ export default function Contact() {
           <img src={contacting} className="img-fluid" />
         </div>
         <div className="cform">
-          <form>
+          <form
+            onSubmit={async (e) => {
+              e.preventDefault();
+              try {
+                await axios.post(
+                  "https://ecrushbackend.onrender.com/api/mail",
+                  mailData
+                );
+                alert("Mail Sent");
+                setMailData({
+                  name: "",
+                  email: "",
+                  message: "",
+                });
+              } catch (err) {
+                console.log(err.message);
+                alert("Mail not sent");
+              }
+            }}
+          >
             <h3>Send Us a Message</h3>
             <div className="input-field">
               <input
