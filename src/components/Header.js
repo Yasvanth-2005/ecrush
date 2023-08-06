@@ -163,7 +163,7 @@ export default function Header({ transparent }) {
               </Link>
             ) : (
               <div
-                className="round"
+                className="round signin-btn"
                 style={{
                   width: "40px",
                   height: "40px",
