@@ -268,7 +268,9 @@ header .navbar-mobile {
   transition: 0.3s;
   z-index: 999;
 }
-
+header .navbar-mobile .signin-btn {
+  display: none;
+}
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;

@@ -41,7 +41,7 @@ export default function Header({ transparent }) {
 
   if (transparent) {
     window.addEventListener("scroll", () => {
-      if (window.scrollY >= 600) {
+      if (window.scrollY >= 100) {
         setHeaderStyle({
           backgroundColor: "white",
           boxShadow:
@@ -151,13 +151,13 @@ export default function Header({ transparent }) {
             {!userData ? (
               <Link
                 to="/signin"
-                id="navElement"
                 style={{
                   backgroundColor: "#093f5b",
                   color: "white",
                   padding: "5px 10px",
                   borderRadius: "5px",
                 }}
+                className="signin-btn"
               >
                 Sign In
               </Link>
