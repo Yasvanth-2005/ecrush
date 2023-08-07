@@ -7,25 +7,26 @@ import axios from "axios";
 export default function Newspaper() {
   const [articles, setArticles] = useState([]);
   const [noArticles, setNoArticles] = useState(false);
+  const [category, setCategory] = useState("");
 
   useEffect(() => {
     try {
-      axios.get(`https://ecrushbackend.onrender.com/api/news`).then((res) => {
-        setArticles(res.data.articles);
-      });
+      axios
+        .get(`https://ecrushbackend.onrender.com/api/news/${category}`)
+        .then((res) => {
+          setArticles(res.data.articles);
+        });
     } catch (error) {
       console.log(error.message);
     }
-  }, []);
+  }, [category]);
 
   useEffect(() => {
-    console.log(articles);
     if (articles.length == 0) {
       setNoArticles(true);
     } else {
       setNoArticles(false);
     }
-    console.log(noArticles);
   }, [articles]);
 
   return (
@@ -33,6 +34,24 @@ export default function Newspaper() {
       <Header />
       <section className="container" style={{ marginTop: "120px" }}>
         <SectionTitle title="News Articles" />
+        <form className="mt-2 mb-5 mx-auto" style={{ width: "300px" }}>
+          <h5 className="text-center mb-3">Select Category</h5>
+          <div className="form-group">
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              className="form-select"
+            >
+              <option value="">All</option>
+              <option value="sports">Sports</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="technology">Technology</option>
+              <option value="business">Business</option>
+              <option value="science">Science</option>
+              <option value="health">Health</option>
+            </select>
+          </div>
+        </form>
         <div className="row d-flex">
           {!noArticles ? (
             articles.map((article, index) => (
@@ -69,7 +88,9 @@ export default function Newspaper() {
               className="d-flex justify-content-center align-items-center"
               style={{ minHeight: "50vh" }}
             >
-              <h2 className="text-align">No Results Found</h2>
+              <div className="spinner-border" role="status">
+                <span className="sr-only"></span>
+              </div>
             </div>
           )}
         </div>

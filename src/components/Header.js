@@ -146,6 +146,15 @@ export default function Header({ transparent }) {
                 Contact Us
               </Link>
             </li>
+            <li className="navElement">
+              <Link
+                to="/newspaper"
+                id="navElement"
+                style={{ marginRight: "10px" }}
+              >
+                News
+              </Link>
+            </li>
           </ul>
           <div>
             {!userData ? (
