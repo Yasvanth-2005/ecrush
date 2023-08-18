@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
 import axios from "axios";
 
@@ -9,7 +8,7 @@ export default function Trainers() {
   const [content, setContent] = useState(false);
   const [data, setData] = useState({});
   useEffect(() => {
-    const serverURL = "https://ecrushbackend.onrender.com/api/trivia";
+    const serverURL = `${process.env.REACT_APP_BACKEND_URL}/api/trivia`;
     axios
       .get(serverURL)
       .then((res) => {

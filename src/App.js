@@ -32,8 +32,7 @@ import Admin from "./admin/admin";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
 function App() {
-  const google_api_token =
-    "1039475539573-dmibas8it6c09r3qm91dl2apnfnck7tq.apps.googleusercontent.com";
+  const google_api_token = process.env.REACT_APP_GOOGLE_WEB_TOKEN;
   return (
     <GoogleOAuthProvider clientId={google_api_token}>
       <Routes>

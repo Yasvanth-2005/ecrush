@@ -12,7 +12,7 @@ export default function Newspaper() {
   useEffect(() => {
     try {
       axios
-        .get(`https://ecrushbackend.onrender.com/api/news/${category}`)
+        .get(`${process.env.REACT_APP_BACKEND_URL}/api/news/${category}`)
         .then((res) => {
           setArticles(res.data.articles);
         });
@@ -60,7 +60,10 @@ export default function Newspaper() {
                   className="card mb-4"
                   style={{ height: "100%", position: "relative" }}
                 >
-                  <div className="card-header" style={{ height: "200px" }}>
+                  <div
+                    className="card-header d-flex align-items-center justify-content-center"
+                    style={{ height: "250px" }}
+                  >
                     <img
                       alt={article.title}
                       src={article.urlToImage}

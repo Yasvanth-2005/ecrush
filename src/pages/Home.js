@@ -317,7 +317,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const serverURL = "https://ecrushbackend.onrender.com/api/posts";
+    const serverURL = `${process.env.REACT_APP_BACKEND_URL}/api/posts`;
     axios.get(serverURL).then((res) => {
       setPostData(res.data);
     });
