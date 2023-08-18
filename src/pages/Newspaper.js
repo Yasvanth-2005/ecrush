@@ -62,7 +62,7 @@ export default function Newspaper() {
                 >
                   <div
                     className="card-header d-flex align-items-center justify-content-center"
-                    style={{ height: "250px" }}
+                    style={{ height: "200px" }}
                   >
                     <img
                       alt={article.title}
