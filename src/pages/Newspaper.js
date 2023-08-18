@@ -60,7 +60,7 @@ export default function Newspaper() {
                   className="card mb-4"
                   style={{ height: "100%", position: "relative" }}
                 >
-                  <div className="card-header" style={{ height: "200px" }}>
+                  <div className="card-header" style={{ height: "250px" }}>
                     <img
                       alt={article.title}
                       src={article.urlToImage}
