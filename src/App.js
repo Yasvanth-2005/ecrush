@@ -1,3 +1,4 @@
+import {useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -32,6 +33,9 @@ import Admin from "./admin/admin";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
 function App() {
+  useEffect(()=>{
+    window.scrollTo({top: 0 });
+  },[window.location.pathname]);
   const google_api_token = process.env.REACT_APP_GOOGLE_WEB_TOKEN;
   return (
     <GoogleOAuthProvider clientId={google_api_token}>
